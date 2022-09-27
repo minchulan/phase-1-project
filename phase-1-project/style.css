@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(31, 31, 29);
+  font-family: Arial;
+  font-size: 20px;
+  padding: 50px;
+}
+
+h1 {
+    color: rgb(39, 39, 222);
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+#title-section {
+
+}
+
+#background-section {
+
+}
+
+
+#header-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+}
+
+#search-section {
+
+}
+
+#drugs-section {
+
+}
+
+#footer-section {
+    color: aliceblue;
+
+}
