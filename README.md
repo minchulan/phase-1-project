@@ -7,7 +7,7 @@ My phase-1-project is a medication recall catalog called 'MedRecalls'. MedRecall
 To install, just fork and clone this repository. Once you cloned it in your terminal, make sure you `cd` into the correct folder.
 
 ## Usage
-To get started type `json-server --watch db.json` in the terminal to spin up the server and `open index.html (for macs) or `explorer.exe index.html` (for windows). The web app will load to an archive and search page where you can see all the drugs currently available, as well as create your own.
+To get started ...
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
