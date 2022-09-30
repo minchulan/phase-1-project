@@ -9,6 +9,10 @@ To install, just fork and clone this repository. Once you cloned it in your term
 ## Usage
 To get started ...
 
+## Core Deliverables 
+As a user, I can...
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please be sure to update tests as appropriate.
