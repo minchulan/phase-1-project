@@ -1,5 +1,5 @@
 // get data using fetch
-    // set up a function that gets the show data and then do something with the converted data
+    // set up a function that gets the show data and then o something with the converted data
 function getShows() {
     fetch('https://api.tvmaze.com/shows')
     .then((res) => res.json())
@@ -40,7 +40,7 @@ function renderShow(show) {
     button.id = show.id
 
     showCollection.append(div)   
-    div.append(h2, h3, p, button);
+    div.append(h2, h3, p, button, img);
 }
 
 // set up a function that generates a card if we don't get any data.
