@@ -3,18 +3,17 @@
 function getShows() {
     fetch('https://api.tvmaze.com/shows')
     .then((res) => res.json())
-    // .then(showData => console.log("showData", showData))   
-    .then(showData => showData.forEach(show => renderShow(show)))
+    // .then(shows => console.log("shows", shows))   
+    .then(shows => shows.forEach(show => renderShows(show)))
     .catch(error => alert(error))  
 }
 
 getShows();
 
 
-// render data to the DOM
-    // Set up a function that generates each card.
+// set up a function that generates each card by rendering data to the DOM
     // note: function declaration renderShow() will be hoisted.
-function renderShow(show) {
+function renderShows(show) {
     const showCollection = document.getElementById("show-list"); // div section will contain all search results
     const div = document.createElement("div")
     const h2 = document.createElement("h2");
@@ -37,76 +36,72 @@ function renderShow(show) {
     const button = document.createElement("button")
     button.classList.add("watch-btn")
     button.textContent = "Watch"
-    button.id = show.id
+    button.addEventListener("click", () => window.open(show.url))
 
-    showCollection.append(div)   
+    showCollection.appendChild(div)   
     div.append(h2, h3, p, button, img);
 }
 
-// set up a function that generates a card if we don't get any data.
+// set up a function that generates a card if we don't get any data back.
 function returnNone() {
     const div = document.createElement("div")
     div.className = "show-class"
-    const h2 = document.createElement("h1")
+    const h2 = document.createElement("h2")
     h2.textContent = "☹️"
     const h3 = document.createElement("h3")
     h3.textContent = "No Shows Found"
 
+    showCollection.appendChild(div);
     div.append(h1, h3)
-    container.appendChild(div)
 
 }
 
-// function getAllShowsBySearch(show) {
-//     fetch(BASE_URL + `?q=${show}`)
-//     .then(res => res.json())
-//     .then(data => data.forEach(renderShow)) 
-//     .catch(error => alert(error))
-// }
-// document.addEventListener("DOMContentLoaded", getAllShowsBySearch)
 
 
-// add event listener and extract whatever user has typed in.
-// get each show's name, image, and rating.
-// function handleShows() {
-//     const form = document.querySelector("#show-form")
-//     form.addEventListener("submit", function (e) {
-//         e.preventDefault()
-//         //form.elements.query.value // to get input value
-//     })
-// }
+const corsHeaders = {
+    'Access-Control-Allow-Headers' : '*',
+    'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Origin' : '*'
+}
 
-// async & await
-// wrap errors in a try-catch
-// const loadShows = async () => {
-//     try {
-//         const res = await fetch("https://api.tvmaze.com/shows")
-//         const data = await res.json()
-//         console.log(data)
-//     } catch (error) {
-//         alert(error)
-//     }
-// }
+// Generate a card based on user input using the search API endpoint 
+const form = document.querySelector("#show-form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
+    const searchTerm = e.target[0].value
 
-// loadShows();
+    async function handleRequest(request) {
+        if (request.method === "OPTIONS") {
+          return new Response("OK", { headers: corsHeaders });
+        }
+        if (request.method === "POST") {
+          return getImages(request);
+        }
+    }
 
-// const form = document.querySelector('show-form')
-// form.addEventListener("submit", function (e) {
-//     e.preventDefault()
-//     const searchTerm = form.elements.query.value
-//     fetch(`https://api.tvmaze.com/search/shows/${searchTerm}`)
-//     form.elements.query.value = "" // empty input
-
-// })
-
-// const createImages = (shows) => {
-//     for (let show of shows) {
-//         if (res.show.image) {
-//             const img = document.createElement("img");
-//             img.src = res.show.image.medium;
-//             document.body.append(img);
-//         }
-            
+        const getImages = async request => {
+            const { query } = await request.json()
+            fetch(`https://api.tvmaze.com/search/shows/${searchTerm}`)
+            .then((res) => res.json())
+            .then((data) => {
+                const img = document.createElement("img");
+                createImages(show);
+                // title, summary, image, rating, genre, link
         
-//     }
-// }
+            })  
+    }
+});
+
+
+const createImages = (shows) => {
+    for (let show of shows) {
+        if (show.image) {
+            const img = document.createElement("img")
+             img.src = show.image.medium;
+             img.alt = "show cover image";
+             document.body.append(img);
+        } 
+    }
+}
+
+
