@@ -7,14 +7,26 @@
     <title>TV Show Search</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap">
 </head>
 <body>
-    <h1>TeleSearch 📺</h1>
-    <h3>Find your favorite TV shows! ⤵️ </h3>
-    <form id="show-form">
-        <input id="show-input" type="text" placeholder="TV Show Title" name="query">
-        <button>Search</button>
-    </form>
+    <div class="right">
+        <a class="access" href="/account/login">Login</a>
+        <a class="access" href="/account/register">Register</a>
+    </div>
+    
+    <h1>
+        <a href="/">
+            <img src="TeleSearch.jpg" alt="TeleSearch logo" id="teleLogo" class="circle" >
+        </a>
+    </h1>
+    <h2>TeleSearch 📺</h2>
+    <div id="showSearch" class="show-search">
+        <form id="show-form">
+            <input id="show-input" type="text" placeholder="TV Show Title" name="query">
+            <button>Search</button>
+        </form>
+    </div>
     <div class="show-section"></div>   
 </body>
 </html>

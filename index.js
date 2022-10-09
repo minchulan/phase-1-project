@@ -33,7 +33,7 @@ function makeShows(show) {
     img.src = show.show.image.medium
     img.alt = 'show cover image'
     rating.innerText = `Rating: ${show.show.rating.average}`
-    button.innerText = 'Watch Now'
+    button.innerText = 'Watch'
     button.addEventListener("click", () => window.open(show.show.url));
     
     div.append(name, img, rating, button);
