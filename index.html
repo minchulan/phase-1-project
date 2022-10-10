@@ -10,23 +10,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap">
 </head>
 <body>
-    <div class="right">
+    <nav class="right">
         <a class="access" href="/account/login">Login</a>
         <a class="access" href="/account/register">Register</a>
-    </div>
-    
-    <h1>
-        <a href="/">
-            <img src="TeleSearch.jpg" alt="TeleSearch logo" id="teleLogo" class="circle" >
+    </nav>
+    <div>
+        <h1>
+        <a href="http://127.0.0.1:5501/">
+            <img src="TeleSearch-logo.jpg" alt="TeleSearch logo" id="teleSearchLogo">
         </a>
-    </h1>
-    <h2>TeleSearch 📺</h2>
+        </h1>
+    </div>
     <div id="showSearch" class="show-search">
+        <h2>TV Show Finder 📺</h2>
         <form id="show-form">
             <input id="show-input" type="text" placeholder="TV Show Title" name="query">
             <button>Search</button>
         </form>
     </div>
-    <div class="show-section"></div>   
+    <section class="show-section">
+    <!----------append shows here-------------->
+
+    </section>   
 </body>
 </html>

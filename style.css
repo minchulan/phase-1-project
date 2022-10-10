@@ -1,32 +1,36 @@
 * {
-    background-color: #a4c3f9;
+    background-color: #93a2ab;
 }
 
 
 button {
     background: none;
-    background-color: rgb(152, 206, 242) ;
+    background-color: rgb(173, 202, 233) ;
     color: rgb(18, 23, 53);
-    border: 3px solid;
-    padding: 0.35em 0.3em;
+    border: 2px solid;
+    padding: 0.3em 0.3em;
     font-size: 1em;
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
     font-family: 'Robot', sans-serif;
 }
 
+
 button:hover {
     border-color: #f1ff5c;
     color: rgb(18, 23, 53);
-    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff7c43;
     transform: translateY(-0.25em);
     cursor: pointer;
     font-family: 'Robot', sans-serif;
 }
 
+
 #teleLogo {
     width: 100px;
     border: 2px solid;
+    border-color:#f1ff5c;
 }
+
 
 .right {
     text-align: right;
@@ -38,29 +42,41 @@ button:hover {
 	padding:5px 10px;
 	border-radius:10px;
 	border:none;
-
 }
+
+
+
+img {
+    /* border: 3px solid;
+    padding: 0.3em 0.3em; */
+}
+
+
 
 h1 {
     color: rgb(18, 23, 53);
+    border-color: #f1ff5c;
     font-family: 'Robot', sans-serif;
     text-align: center;
 }
+
 
 h2 {
     text-align: center;
     font-weight: 900;
-    font-size: 39px;
+    font-size: 30px;
     font-family: 'Robot', sans-serif;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     color: rgb(7, 31, 86);
 }
 
 
 h3 {
     color: rgb(18, 23, 53);
+    font-weight: 900;
+    font-size: 25px;
     font-family: 'Robot', sans-serif;
-    text-align: center;
+    margin-top: 5em;
 }
 
 
@@ -69,7 +85,7 @@ h3 {
     background-color: whitesmoke;
     color: rgb(18, 23, 53);
     border: 3px solid;
-    padding: 0.35em 3.5em;
+    padding: 0.3em 3.5em;
     font-size: 1em;
     font-weight: 500;
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
@@ -78,8 +94,12 @@ h3 {
 }
 
 
-#show-form {
+.show-card {
     text-align: center;  
+}
+
+#show-form {
+    text-align: center;
 }
 
 
@@ -91,9 +111,21 @@ h3 {
     /* flex-wrap: wrap; */
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
+
 #show-section {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    text-align: center;
+    font-family: 'Robot', sans-serif;
+}
+
+
+#show-paragraph {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
