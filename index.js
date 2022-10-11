@@ -6,7 +6,7 @@ function getShows() {
   const form = document.querySelector("#show-form")
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const searchTerm = document.querySelector("#show-input").value;
+    const searchTerm = document.querySelector("#show-input").value
     fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
     .then((res) => res.json())
     .then((shows) =>
@@ -20,6 +20,7 @@ function getShows() {
   })
 }
 
+
 const container = document.querySelector(".show-section")
 
 function makeShows(show) {
@@ -29,7 +30,6 @@ function makeShows(show) {
   const rating = document.createElement("h4");
   const paragraph = document.createElement("p");
   const button = document.createElement("button");
-  const button2 = document.createElement("button");
 
   card.setAttribute("class", "show-card");
   img.setAttribute("class", "show-image");
@@ -37,7 +37,6 @@ function makeShows(show) {
   rating.setAttribute("class", "show-rating");
   paragraph.setAttribute("class", "show-paragraph");
   button.setAttribute("class", "show-info");
-  button2.setAttribute("class", "like-button");
 
   name.innerText = show.show.name.toUpperCase();
   img.src = show.show.image.medium
@@ -46,15 +45,9 @@ function makeShows(show) {
   paragraph.innerText = show.show.summary.slice(3, -4);
   button.innerText = "Show Info";
   button.addEventListener("click", () => window.open(show.show.url));
-  button2.innerText = "❤️";
-  // button2.addEventListener("click", () => {
-  //   for (let i = 0; i >= input; i++) {
-  //       input.value = parseInt(input.value) + 1;
-  //       alert(input);
-  //   }
-  // });
 
-  card.append(name, img, rating, paragraph, button, button2);
+
+  card.append(name, img, rating, paragraph, button);
   container.append(card);
 }
 
@@ -67,4 +60,9 @@ function returnNone() {
   container.appendChild(div)
   div.append(h3)
 }
+
+
+const input = document.querySelector('#show-input')
+const h2 = document.querySelector('h2')
+input.addEventListener("input", e => h2.innerText = input.value);
 
