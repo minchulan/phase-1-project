@@ -38,19 +38,10 @@ button:hover {
     font-weight: 500;
     font-style:normal;
     background-color: rgb(18, 23, 53);
-	/* background: rgb(18, 23, 53); */
 	padding:5px 10px;
 	border-radius:10px;
 	border:none;
 }
-
-
-
-img {
-    /* border: 3px solid;
-    padding: 0.3em 0.3em; */
-}
-
 
 
 h1 {
@@ -105,7 +96,7 @@ h3 {
 
 #show-search {
     font-family: 'Robot', sans-serif;
-    color: rgb(18, 23, 53);
+    color: #121735;
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
@@ -133,29 +124,3 @@ h3 {
     text-align: center;
     font-family: 'Robot', sans-serif;
 }
-
-/* CSS Text Properties
-text-align
-font-weight
-text-decoration
-line-height
-letter-spacing */
-
-/* Pseudo classes
-:active
-:checked
-:first
-:first-child
-:hover
-:not()
-:nth-child()
-:nth-of-type() */
-
-/* {
-    font-family: 'Robot', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #151b29;
-} */

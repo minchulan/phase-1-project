@@ -37,14 +37,6 @@ Example:
 | `q`       | `dark`   | https://api.tvmaze.com/search/shows?q=girls |
 
 
-
-## Assignment By
-
-This is the phase 1 project for the SENG flex program by:
-
-- Flatiron School
-
-
 ## Features
 
 - Button hover cursor pointer
@@ -68,14 +60,15 @@ This is the phase 1 project for the SENG flex program by:
 - Add more integrations
 
 
-### Deliverables
+## Deliverables
 
 - On page load, dynamically render a list of tv shows in the `div.show-section` container. You can
   fetch your tv show search input from `https://api.tvmaze.com/search/shows?q=${searchTerm}`.
 - When a user searches for a tv show, display the tv show name, image, rating, summary, and 'More Info' button.
 - When a user clicks the 'More Info' button, it opens window that points to the show url value provided by the external API.
 - When a user searches for a tv show, a live preview of the search input text appears above the search input field.
-### Example
+
+## Example
 
 The below screenshots demonstrate the working functionality of the app.
 

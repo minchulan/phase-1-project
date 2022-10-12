@@ -20,7 +20,6 @@ function getShows() {
   })
 }
 
-
 const container = document.querySelector(".show-section")
 
 function makeShows(show) {
@@ -39,18 +38,15 @@ function makeShows(show) {
   button.setAttribute("class", "show-info");
 
   name.innerText = show.show.name.toUpperCase();
-  img.src = show.show.image.medium
-  img.alt = "show cover image";
+  img.src = show.show.image.medium;
   rating.innerText = `Rating: ${show.show.rating.average}`;
   paragraph.innerText = show.show.summary.slice(3, -4);
-  button.innerText = "Show Info";
-  button.addEventListener("click", () => window.open(show.show.url));
-
+  button.innerText = "Show Link";
+  button.addEventListener("click", () => alert(show.show.url));
 
   card.append(name, img, rating, paragraph, button);
   container.append(card);
 }
-
 
 function returnNone() {
   const div = document.createElement("div")
@@ -61,8 +57,9 @@ function returnNone() {
   div.append(h3)
 }
 
-
 const input = document.querySelector('#show-input')
 const h2 = document.querySelector('h2')
 input.addEventListener("input", e => h2.innerText = input.value);
 
+const logo = document.querySelector("#teleSearchLogo")
+logo.addEventListener("mouseover", e => console.log(e))
