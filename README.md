@@ -1,7 +1,5 @@
 # TeleSearch - TV Show Finder app
-
-My phase-1-project is a television show finder app called, 'TeleSearch'. TeleSearch is a JS application that leverages DOM manipulation to interact with the user. I built this project because I enjoy watching TV whenever I have a moment to spare, 
-but I find that most of my time is wasted trying to find the perfect show. TeleSearch is designed for user's like myself to give time back from searching to put towards watching.
+Telesearch is a lightweight 'tv show finder app.' TeleSearch is a JS application that leverages DOM manipulation to interact with the user. I built this project because watching tv is one way I decompress after a stressful day at work; consider it my self-care practice if you will. However, if you're anything like me, you spend 80% of your time searching for the perfect show and 20% of the time remaining actually watching it. Telesearch aims to solve this problem with its simple and lightweight web app that gives users the time back from searching to put towards enjoying! 
 
 ![TeleSearch-logo](https://user-images.githubusercontent.com/108310591/194971805-868da697-9830-42b3-a320-dff336149258.jpg)
 ## License
@@ -63,11 +61,13 @@ Example:
 
 ## Deliverables
 
-- On page load, dynamically render a list of tv shows in the `div.show-section` container. You can
+- On page load, dynamically render a list of tv shows in the `div#show-section` container. You can
   fetch your tv show search input from `https://api.tvmaze.com/search/shows?q=${searchTerm}`.
-- When a user searches for a tv show, display the tv show name, image, rating, summary, and 'More Info' button.
-- When a user clicks the 'More Info' button, it opens window that points to the show url value provided by the external API.
-- When a user searches for a tv show, a live preview of the search input text appears above the search input field.
+- When a user searches for a tv show, display the tv show name, image, rating, summary, and 'Get Link' button.
+- When a user clicks the 'Get Link' button, it alerts the show url.
+- When a user types TV Show Title in the search input field, a live preview of the search input populates in real time in h2 text.
+- When a user hovers over all buttons, the button itself is styled with transitions (color, border-color, box-shadow, transform at 0.25s) and hover is styled with a cursor pointer, box-shadow color #ff7c43, and border color #f1ff5c.
+- When a user clicks on the #teleSearchLogo, search results are cleared. 
 
 ## Example
 
