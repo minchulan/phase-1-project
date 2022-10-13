@@ -1,8 +1,7 @@
-const handleLoadPage = () => {
-  getShows();
-};
+window.addEventListener("DOMContentLoaded", () => {
+  getShows()
+});
 
-document.addEventListener("DOMContentLoaded", handleLoadPage);
 
 function getShows() {
   const form = document.querySelector("#show-form");
@@ -10,11 +9,11 @@ function getShows() {
     e.preventDefault();
     const searchTerm = document.querySelector("#show-input").value;
     fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then((shows) =>
         shows.length > 0 ? shows.forEach(makeShows) : returnNone()
-    )
-      .catch(error => console.log(error));
+      )
+      .catch((error) => console.log(`This is my error: ${error}`))
     e.target.reset();
     container.innerHTML = "";
   });
@@ -46,7 +45,7 @@ function makeShows(show) {
     .replace(/[^0-9a-zA-Z. ]/g, "");
 
   const button = document.createElement("button");
-  button.id = `show-button-${show.id}`
+  button.id = `show-button-${show.id}`;
   button.className = "show-link";
   button.textContent = "Get Link";
   button.addEventListener("click", () => alert(show.show.url));
@@ -68,8 +67,11 @@ const input = document.querySelector("#show-input");
 const h2 = document.querySelector("h2");
 input.addEventListener("input", (e) => (h2.innerText = input.value));
 
-const searchBar = document.querySelector("#show-input")
-searchBar.addEventListener("keydown", event => event.target.style.color = makeRandomColor())
+const searchBar = document.querySelector("#show-input");
+searchBar.addEventListener(
+  "keydown",
+  (event) => (event.target.style.color = makeRandomColor())
+);
 
 function makeRandomColor() {
   const r = Math.floor(Math.random() * 255);
