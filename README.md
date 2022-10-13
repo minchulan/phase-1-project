@@ -75,6 +75,4 @@ The below screenshots demonstrate the working functionality of the app.
 
 <img width="1669" alt="CleanShot 2022-10-10 at 20 37 46@2x" src="https://user-images.githubusercontent.com/108310591/194972878-c160aac8-1307-4744-8cfd-234306bac5b4.png">
 <img width="1664" alt="CleanShot 2022-10-10 at 20 38 40@2x" src="https://user-images.githubusercontent.com/108310591/194972884-489e5da9-69e3-4d1c-ae9c-8f9d22f1a183.png">
-![CleanShot 2022-10-13 at 15 57 07@2x](https://user-images.githubusercontent.com/108310591/195697731-3af7b70c-0619-4c0a-abb0-9e81b00ddfca.png)
-![CleanShot 2022-10-13 at 15 54 16@2x](https://user-images.githubusercontent.com/108310591/195697744-b9d56f9a-0343-438c-b32e-4e48822c6b37.png)
-![CleanShot 2022-10-13 at 15 52 00@2x](https://user-images.githubusercontent.com/108310591/195697749-1b1c764b-505b-427a-a8bd-8f59cbee8afe.png)
+<img width="1664" alt="CleanShot 2022-10-13 at 15 57 07@2x" src="https://user-images.githubusercontent.com/108310591/195697731-3af7b70c-0619-4c0a-abb0-9e81b00ddfca.png">
