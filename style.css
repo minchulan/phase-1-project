@@ -124,3 +124,7 @@ h3 {
     text-align: center;
     font-family: 'Robot', sans-serif;
 }
+
+.alert {
+    background-color: red;
+}
