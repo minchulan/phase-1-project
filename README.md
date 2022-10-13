@@ -15,7 +15,7 @@ Built as a JS application that leverages DOM manipulation for dynamic interactiv
 
 ## Lessons Learned
 
-In Phase 1, I learned basic javaScript as well as modern javaScript (ES6) that includes destructuring, arrow functions, and the spread operator. Furthermore, I learned about the DOM and DOM manipulation, along with events (e.g., event listeners and event handlers). Importantly, I learned to code with user experience in mind which entails utilizing asynchronous code, such as when fetching data with an external API or internal db.json 
+In Phase 1, I learned the fundamentals of the javaScript language as well as modern javaScript (ES6) that includes destructuring, arrow functions, and the spread operator. Furthermore, I now understand JS basics like primitives versus objects, or value types versus reference types. I'm now able to talk a bout declaration words (e.g., let, var and const), different scopes (e.g., global, block, and function), and all things the DOM-related (i.e., adding, updating, grabbing content, event listeners, and event handlers). Importantly, I learned how to use data structures to solve problems in JavaScript and to leverage asynchronous code via server communication. Ultimately, all efforts and learnings are pointed to ensure we build web applications that provide the best user experience for the end user.
 
 
 ## Installation
