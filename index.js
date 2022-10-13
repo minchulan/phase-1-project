@@ -10,10 +10,10 @@ function getShows() {
     e.preventDefault();
     const searchTerm = document.querySelector("#show-input").value;
     fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
-      .then((res) => res.json())
+      .then(res => res.json())
       .then((shows) =>
         shows.length > 0 ? shows.forEach(makeShows) : returnNone()
-      )
+    )
       .catch(error => console.log(error));
     e.target.reset();
     container.innerHTML = "";
@@ -68,5 +68,12 @@ const input = document.querySelector("#show-input");
 const h2 = document.querySelector("h2");
 input.addEventListener("input", (e) => (h2.innerText = input.value));
 
-const logo = document.querySelector("#teleSearchLogo");
-logo.addEventListener("mouseover", (e) => console.log(e));
+const searchBar = document.querySelector("#show-input")
+searchBar.addEventListener("keydown", event => event.target.style.color = makeRandomColor())
+
+function makeRandomColor() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}

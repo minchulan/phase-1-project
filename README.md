@@ -39,6 +39,7 @@ Example:
 
 ## Features
 
+- Search input random color display
 - Button hover cursor pointer
 - Button hover box shadow
 - Button color transitions
